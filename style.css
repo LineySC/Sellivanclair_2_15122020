@@ -1,0 +1,40 @@
+/***** Style Général *****/
+body{
+    background-color: #FFFFFF;
+    font-family: Raleway;
+    margin-left: 25%;
+    margin-right:25%;
+}
+/***** En-tête *****/
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title, a, img{
+    max-width: 60%;
+    height: auto;
+}
+
+.menu, ul, li{
+    padding-left: 5%;
+    padding-right: 15%;
+}
+.menu, ul, li, a{
+    display: inline-flex;
+    text-decoration: none;
+    color: #0065FC;
+}
+
+/***** Content *****/
+
+/***** Find *****/
+.search, .h2{
+    font-weight: bold;
+}
+
+.filters{
+    border: solid 10px #F2F2F2;
+
+}
