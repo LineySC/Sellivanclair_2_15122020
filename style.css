@@ -339,6 +339,15 @@ header{
     transition: 0.2s ease-in-out;
 }
 
+@media screen and (maw-witdh: 800px)
+{
+    .popular{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        
+    }
+}
 
 
 /***** Activities *****/
@@ -359,7 +368,13 @@ header{
     grid-template: 
     'left_alone img_left_1 right_alone img_right_1'
     'left_alone img_left_2 right_alone img_right_2';
+    align-items: center;
+    margin-bottom: 10%;
+}
 
+.activities_container p{
+    padding-left: 5%;
+    font-weight: bold;
 }
 
 
@@ -367,6 +382,19 @@ header{
 #activities img{
     width: 300px;
     height: 200px;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.activities_container a{
+    text-decoration: none;
+    color: black;
+    border-radius: 0px 0px 15px 15px;
+
+}
+
+.shadow{
+    border-radius: 15px;
+    box-shadow: 0 0 10px grey;
 }
 
 @media screen and (max-width: 800px)
@@ -375,13 +403,26 @@ header{
     .activities_container{
         display: flex;
         flex-direction: column;
-        background-color: #0065FC;
     }
 
+    #activities img{
+        width: 400px;
+        height: 150px;
+    }
 
 }
 
 /***** Footer *****/
+
+@media screen and (max-width: 800px)
+{
+    footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 10%;
+    }
+}
 
 footer{
     display: flex;
