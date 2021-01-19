@@ -59,7 +59,8 @@ header{
 @media screen and (max-width: 800px){
     header{
         display: flex;
-        margin: 0% 2% 0% 2%;
+        align-items: flex-start;
+        margin: 2% 2% 0% 2%;
     }
 
     .menu ul{
@@ -70,23 +71,34 @@ header{
     }
 
     .menu{
-        margin-bottom: 100px;
+        margin-bottom: 50px;
+    }
+
+    .menu ul li a{
+        font-weight: bold;
+        margin: 0;
+
     }
 
     .menu_tel{
         position: absolute;
         right: 0;
         left: 0;
+        top: 10%;
         margin: 0;
     }
 
     .menu_tel ul{
-        display: inline-flex;
+        display: flex;
         flex-direction: row;
-        justify-content: center;
-        align-items: center;
+        justify-content: space-evenly;
+        padding: 0;
     }
 
+    .menu_tel ul li a{
+        border-bottom: 3px solid #0065FC;
+        padding-bottom: 10px;
+    }
     
 
 }
