@@ -10,11 +10,6 @@ html{
     background-color: var(--grey-color);
 }
 
-img{
-    width: 1920px;
-    height: 1080px;
-}
-
 body{
     background-color: #FFFFFF;
     font-family: Raleway;
