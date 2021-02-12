@@ -6,10 +6,30 @@
     --grey-color: #F2F2F2;
 }
 
+html{
+    background-color: var(--grey-color);
+}
+
+img{
+    width: 1920px;
+    height: 1080px;
+}
+
 body{
     background-color: #FFFFFF;
     font-family: Raleway;
-    margin: 0;
+    margin: 0 auto;
+    max-width: 1600px;
+}
+
+@media all and (min-width:1600px){
+
+    body{
+        border-right: 2px solid var(--grey-color);
+        border-left: 2px solid var(--grey-color);
+        box-shadow: 0 0 100px grey;
+    }
+
 }
 
 img{
@@ -35,8 +55,8 @@ header{
 }
 
 .title a img{
-    max-width: 40%;
-    height: auto;
+    width: 50%;
+
 }
 
 .menu ul{
@@ -55,11 +75,11 @@ header{
     color: black;
 }
 
-@media screen and (max-width: 800px){
+@media all and (max-width: 768px){
     header{
         display: flex;
         align-items: flex-start;
-        margin: 2% 2% 0% 2%;
+        margin: 2% 0% 0% 2%;
     }
 
     .menu ul{
@@ -83,22 +103,48 @@ header{
         position: absolute;
         right: 0;
         left: 0;
-        top: 10%;
+        top: 8%;
         margin: 0;
     }
+
+
 
     .menu_tel ul{
         display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
+        justify-content: center;
         padding: 0;
+
+    }
+
+    .menu_tel .host{
+        border-bottom: 3px solid #F2F2F2;
+        width: 50%;
+        margin: 0;
+    }
+
+    .menu_tel .host:hover{
+        color: var(--blue-color);
+        border-bottom: 3px solid var(--blue-color);
+    }
+
+
+    .menu_tel .activities{
+        border-bottom: 3px solid #F2F2F2;
+        width: 50%;
+        margin: 0;
+    }
+
+    .menu_tel .activities:hover{
+        color: var(--blue-color);
+        border-bottom: 3px solid var(--blue-color);
     }
 
     .menu_tel ul li a{
         display: block;
         text-align: center;
-        width: 207px;
-        border-bottom: 3px solid #F2F2F2;
+        width: 100%;
+        font-weight: bold;
         padding-bottom: 10px;
         font-weight: normal;
         color: black;
@@ -107,9 +153,7 @@ header{
 
     .menu_tel ul li a:hover{
         color: var(--blue-color);
-        border-bottom: 3px solid var(--blue-color);
     }
-    
 
 }
 
@@ -117,7 +161,7 @@ header{
 
 /***** Find *****/
 
-@media screen and (max-width: 800px){
+@media all and (max-width: 768px){
 
     .find{
         display: flex;
@@ -190,17 +234,21 @@ header{
     border: 3px solid #F2F2F2;
     border-radius: 25px;
     margin-right: 20px;
-    padding-right: 20px;
+
 }
 
 .filters ul li a{
     text-decoration: none;
     color: black;
+    padding-right: 20px;
 }
 
 .filters ul li a:hover{
     color: #0065FC;
-    transition: all 0.2s linear;
+    transition: all 0.2s ease;
+    right: 100%;
+
+    border-radius: 25px;
 }
 
 .filters ul li i{
@@ -229,7 +277,7 @@ header{
     text-align: center;
 }
 
-@media screen and (max-width: 800px){
+@media all and (max-width: 768px){
 
     .filters{
         display: flex;
@@ -277,13 +325,14 @@ header{
     background-color: #FFFFFF;
     border-radius: 15px;
     box-shadow: 0 0 10px grey;
-    margin: 20px;
-    transition: 0.2s;
+    margin: 10px;
+    width: 30%;
+ 
 }
 
 .host_city img{
-    width: 220px;
-    height: 100px;
+    width: 100%;
+    height: 150px;
     border-radius: 15px 15px 0px 0px;
     object-fit: cover;
 }
@@ -295,6 +344,7 @@ header{
     text-decoration: none;
     color: black;
     padding: 5px;
+    width: 100%;
 }
 
 .host_city_img i{
@@ -329,7 +379,7 @@ header{
     transition: 0.2s ease-in-out;
 }
 
-@media screen and (max-width: 800px){
+@media all and (max-width: 768px){
 
     #host{
         display: flex;
@@ -354,6 +404,7 @@ header{
         background-color: #FFFFFF;
         border-radius: 15px;
         box-shadow: 0 0 10px grey;
+        width: 100%;
     }
 
     .host_city img{
@@ -365,10 +416,50 @@ header{
 
 }
 
+@media screen and (min-width: 768px) and (max-width: 1024px)
+{
+
+    #host{
+        display: flex;
+        flex-direction: column-reverse;
+        margin: 0;
+    }
+
+    .host_container{
+        padding: 10px;
+        border-radius: 15px;
+        background-color: #FFFFFF;
+    }
+
+    .host_city{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .host_city_img{
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #FFFFFF;
+        border-radius: 15px;
+        box-shadow: 0 0 10px grey;
+        width: 100%;
+    }
+
+    .host_city img{
+        width: 100%;
+        height: 150px;
+        border-radius: 15px 15px 0px 0px;
+        object-fit: cover;
+    }
+
+}
+
+
+
 /***** Bloc Popular *****/
 
 .popular{
-    width: 25%;
+    width: 90%;
     min-width: 25%;
     display: flex;
     flex-direction: column;
@@ -392,19 +483,25 @@ header{
     margin: 20px;
     text-decoration: none;
     color: black;
+    padding-right: 15px;
+}
+
+.popular_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .popular_container img{
-    width: 100px;
-    height: 150px;
+    width: 140px;
     padding: 6px;
     border-radius: 15px 0px 0px 15px;
+
 }
 
 .popular_img{
     display:flex;
     flex-direction: column;
-    flex-wrap: nowrap;
 }
 
 .popular_contenu{
@@ -413,6 +510,7 @@ header{
     align-items: flex-start;
 
 }
+
 .popular_contenu h3{
     margin: 10px 0px 0px 10px;
 }
@@ -433,13 +531,12 @@ header{
     transition: 0.2s ease-in-out;
 }
 
-@media screen and (max-width: 800px)
+@media all and (max-width: 768px)
 {
     .popular{
         display: flex;
         flex-direction: column;
         width: auto;
-        border-radius: 15px;
         background-color: #F2F2F2;
         padding: 20px;
         margin: 0;
@@ -447,6 +544,21 @@ header{
     }
 
 }
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+
+    .popular{
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        background-color: #F2F2F2;
+        padding: 20px;
+        margin: 0;
+        border-radius: 0px;
+    }
+
+}
+
 
 
 /***** Activities *****/
@@ -464,7 +576,7 @@ header{
 .activities_container{
     display: grid;
     grid-gap: 50px;
-    grid-auto-columns: min-content;
+    grid-template-columns: 25% 25% 25% 25%;
     grid-template: 
     'left_alone img_left_1 right_alone img_right_1'
     'left_alone img_left_2 right_alone img_right_2';
@@ -479,7 +591,6 @@ header{
 }
 
 #activities img{
-
     border-radius: 15px 15px 0px 0px;
 }
 
@@ -490,51 +601,66 @@ header{
 
 }
 
+        /** Taille des Boites **/
+
 .left_alone, .right_alone{
     width: 100%;
     height: 100%;
 }
-
-.left_alone img{
-    width: 300px;
-    height: 90%;
-}
-
+    
 .img_left_1{
-    height: 100%;
-}
-
-
-.img_left_1 img{
-    width: 300px;
-    height: 200px;
+    width: 100%;
+    height: 80%;
 }
 
 .img_left_2{
+    width: 100%;
+    height: 100%
+}
+
+.img_right_1{
+    width: 100%;
+    height: 80%;
+}
+
+.img_right_2{
+    width: 100%;
     height: 100%;
 }
 
+        /** Taille des images **/
+
+.left_alone img{
+    width: 100%;
+    height: 90%;
+}
+
+.img_left_1 img{
+    width: 100%;
+    height: 80%;
+}
+
 .img_left_2 img{
-    width: 300px;
+    width: 100%;
     height: 80%;
 }
 
 .right_alone img{
-    width: 300px;
+    width: 100%;
     height: 90%;
 }
 
 .img_right_1 img{
-    width: 300px;
+    width: 100%;
     height: 80%;
 }
 
 .img_right_2 img{
-    width: 300px;
+    width: 100%;
     height: 80%;
 }
 
-@media screen and (max-width: 800px)
+@media all and (max-width: 768px)
 {
 
     #activities{
@@ -553,9 +679,11 @@ header{
 
 }
 
+
+
 /***** Footer *****/
 
-@media screen and (max-width: 800px)
+@media all and (max-width: 768px)
 {
     footer{
         display: flex;
