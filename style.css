@@ -1,13 +1,9 @@
 /***** Style Général *****/
 
-:root{
-    --blue-color: #0065FC;
-    --light-blue-color:  #DEEBFF;
-    --grey-color: #F2F2F2;
-}
+
 
 html{
-    background-color: var(--grey-color);
+    background-color: #F2F2F2;
 }
 
 body{
@@ -20,8 +16,8 @@ body{
 @media all and (min-width:1600px){
 
     body{
-        border-right: 2px solid var(--grey-color);
-        border-left: 2px solid var(--grey-color);
+        border-right: 2px solid #F2F2F2;
+        border-left: 2px solid #F2F2F2;
         box-shadow: 0 0 100px grey;
     }
 
@@ -32,7 +28,7 @@ img{
 }
 
 .stars .grey{
-    color: var(--grey-color);
+    color: #F2F2F2;
 }
 
 .shadow{
@@ -62,7 +58,7 @@ header{
 .menu ul li a{
     margin-left: 50px;
     text-decoration: none;
-    color: var(--blue-color);
+    color: #0065FC;
     font-weight: 900;
 }
 
@@ -118,8 +114,8 @@ header{
     }
 
     .menu_tel .host:hover{
-        color: var(--blue-color);
-        border-bottom: 3px solid var(--blue-color);
+        color: #0065FC;
+        border-bottom: 3px solid #0065FC;
     }
 
 
@@ -131,7 +127,7 @@ header{
 
     .menu_tel .activities:hover{
         color: var(--blue-color);
-        border-bottom: 3px solid var(--blue-color);
+        border-bottom: 3px solid #0065FC;
     }
 
     .menu_tel ul li a{
@@ -146,7 +142,7 @@ header{
     }
 
     .menu_tel ul li a:hover{
-        color: var(--blue-color);
+        color: #0065FC;
     }
 
 }
