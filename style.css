@@ -3,7 +3,7 @@
 
 
 html{
-    background-color: #F2F2F2;
+    background-color: white;
 }
 
 body{
@@ -13,15 +13,6 @@ body{
     max-width: 1600px;
 }
 
-@media all and (min-width:1600px){
-
-    body{
-        border-right: 2px solid #F2F2F2;
-        border-left: 2px solid #F2F2F2;
-        box-shadow: 0 0 100px grey;
-    }
-
-}
 
 img{
     object-fit: cover;
@@ -160,15 +151,20 @@ header{
     display: flex;
 }
 
-.search i{
+.fa-map-marker-alt{
     background-color: #F2F2F2;
-    padding: 10px;
     border-radius: 10px 0px 0px 10px;
+}
+
+.search i{
+
+    padding: 10px;
+
     font-weight: 900;
 }
 
 .search input{
-    border: solid 2px #F2F2F2;
+    border: solid 1px #F2F2F2;
     padding: 10px 10px 10px 10px;
     font-family: Raleway;
     transition: 0.2s;
@@ -187,7 +183,6 @@ header{
     color: #FFFFFF;
     padding: 0px 15px 0px 15px;
     font-family: Raleway;
-    border-radius: 0px 10px 10px 0px;
     font-weight: 900;
     letter-spacing: 1px;
 }
@@ -207,9 +202,41 @@ header{
         margin: 5% 2% 0% 2%;
     }
 
+    .search{
+        border:solid 1px #F2F2F2;
+    }
+
+    .search input{
+        border: none;
+    }
+
+    .btn_hide{
+        display: none;
+    }
+
+    .fa-search{
+        color: white;
+        background-color: #0065FC;
+        border-radius: 10px 10px 10px 10px;
+    }
+
+    .search input{
+        border-right: none;
+    }
+
+}
+
+@media all and (min-width: 768px){
+    
+    .fa-search{
+        display: none;
+    }
+
 }
 
 /***** Filters *****/
+
+
 
 .filters{
     display: flex;
@@ -220,6 +247,7 @@ header{
 .filters ul{
     display: flex;
     list-style: none;
+    padding: 5px;
 }
 
 .filters ul li{
@@ -288,7 +316,12 @@ header{
     .filters ul li{
         margin: 5px;
     }
+
+
+
 }
+
+
 
 /***** Hébergement *****/
 
@@ -689,6 +722,11 @@ header{
         display: flex;
         flex-direction: column;
     }
+
+    .activities_container p{
+        font-size: 10px;
+    }
+
 }
 
 
