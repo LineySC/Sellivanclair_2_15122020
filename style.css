@@ -185,6 +185,7 @@ header{
     font-family: Raleway;
     font-weight: 900;
     letter-spacing: 1px;
+    border-radius: 0px 10px 10px 0px;
 }
 
 .search .btn_submit:hover{
